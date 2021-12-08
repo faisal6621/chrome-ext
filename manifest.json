@@ -1,0 +1,21 @@
+{
+    "name": "Replace content example",
+    "description": "Build an Extension!",
+    "version": "1.0",
+    "manifest_version": 3,
+    "permissions": [
+        "activeTab",
+        "tabs",
+        "scripting"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://amazon.in/*", "https://www.amazon.in/*"
+            ],
+            "js": [
+                "replace.js"
+            ]
+        }
+    ]
+}
