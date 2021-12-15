@@ -1,9 +1,22 @@
 window.onload = (event) => {
     console.log("window loaded")
+    const markJsPath = getResource('./lib/mark.es6.js')
+    console.log(markJsPath)
+
+    const importMarkJs = document.createElement('script')
+    importMarkJs.setAttribute('type', 'module')
+    importMarkJs.setAttribute('integrity', 'sha256-ArnOhqhsa/eII4oru6nNsb4c2avLzJ9d26MLtkUeUx8=')
+    importMarkJs.innerHTML = `import Mark from '${markJsPath}'`
+    document.body.appendChild(importMarkJs)
+
     const span = document.createElement("span")
     span.setAttribute("id", "replacer")
     span.style.display = "none"
     document.body.appendChild(span)
+    console.log('document updated')
+
+    const markInstance = new Mark(document.getElementById("content"))
+    markInstance.mark("unit")
 }
 
 window.onmouseup = (event) => {

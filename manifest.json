@@ -11,7 +11,7 @@
     "content_scripts": [
         {
             "matches": [
-                "https://amazon.in/*", "https://www.amazon.in/*", "https://docs.spring.io/*"
+                "https://*/*"
             ],
             "js": [
                 "replace.js"
