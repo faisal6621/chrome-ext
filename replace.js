@@ -1,10 +1,22 @@
+const words = {
+    "unit": "an individual thing",
+    "resources": "a stock or supply of assets"
+}
+
 const doneMarking = total => {
     console.log("done marking.", "marked:", total)
 }
 
+const marked = markedDOM => {
+    console.log("marked:", markedDOM)
+    // update the markedDOM to add meaning to the marked worked
+}
+
 const markOptions = {
     "className": "marked",
-    "done": doneMarking
+    "accuracy": "exactly",
+    "done": doneMarking,
+    "each": marked
 }
 
 window.onload = (event) => {
@@ -17,7 +29,9 @@ window.onload = (event) => {
     console.log('document updated')
 
     const markInstance = new Mark(document.getElementById("content"))
-    markInstance.mark("unit", markOptions) // TODO: repeat for all words to mark
+    for (var word in words) {
+        markInstance.mark(word, markOptions)
+    }
 }
 
 window.onmouseup = (event) => {
