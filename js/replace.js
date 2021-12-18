@@ -8,8 +8,15 @@ const doneMarking = total => {
 }
 
 const marked = markedDOM => {
-    console.log("marked:", markedDOM)
+    console.log("marked:", markedDOM.innerText)
     // update the markedDOM to add meaning to the marked worked
+    const description = words[markedDOM.innerText.toLowerCase()]
+    const meaningSpan = document.createElement("span")
+    meaningSpan.className = "meaning"
+    meaningSpan.innerHTML = description
+    if (description) {
+        markedDOM.appendChild(meaningSpan)
+    }
 }
 
 const markOptions = {

@@ -1,0 +1,9 @@
+.marked .meaning{
+    position: relative;
+    top: -10px;
+    font-size: 12px;
+}
+
+.marked{
+    display: inline-block;
+}

@@ -1,7 +1,7 @@
 {
-    "name": "Replace content example",
-    "description": "Build an Extension!",
-    "version": "1.0",
+    "name": "Replacer - word annotator",
+    "description": "Sample extension for annotating words",
+    "version": "1.1.0",
     "manifest_version": 3,
     "permissions": [
         "activeTab",
@@ -13,9 +13,12 @@
             "matches": [
                 "https://*/*"
             ],
+            "css": [
+                "css/main.css"
+            ],
             "js": [
                 "lib/mark.es6.min.js",
-                "replace.js"
+                "js/replace.js"
             ]
         }
     ]
