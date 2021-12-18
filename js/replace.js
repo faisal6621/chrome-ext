@@ -35,7 +35,7 @@ window.onload = (event) => {
     document.body.appendChild(span)
     console.log('document updated')
 
-    const markInstance = new Mark(document.getElementById("content"))
+    const markInstance = new Mark(document.querySelectorAll("p"))
     for (var word in words) {
         markInstance.mark(word, markOptions)
     }
