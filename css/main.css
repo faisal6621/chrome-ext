@@ -6,14 +6,14 @@
     font-size: 0.75em;
     white-space: nowrap;
     font-size: 12px;
-    border-bottom: 1px solid #6bb;
-    color: #6bb;
+    border-bottom: 1px solid #6b4;
+    color: #6b4;
 }
 
 .marked{
     display: inline-block;
     position: relative;
     margin-top: 1em;
-    border-bottom: 1px dashed #6bb;
+    text-decoration: underline #6b4;
     background-color: transparent;
 }
